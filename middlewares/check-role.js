@@ -20,7 +20,7 @@ module.exports = (req, res, next) => {
             }
             next()
         } else {
-            throw new Error('Your have no permission to perform this action!')
+            throw new Error('You have no permission to perform this action!')
         }
     } catch (err) {
         // const error = new HttpError('Request denied!', 401)
