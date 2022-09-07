@@ -78,7 +78,7 @@ const signup = async (req, res, next) => {
     try {
         token = jwt.sign(
             { userId: createdAccount.id, username: createdAccount.username },
-            'supersecret_dont_share',
+            process.env.JWT_SECRET,
             { expiresIn: '1h' }
         )
     } catch (err) {
@@ -148,7 +148,7 @@ const login = async (req, res, next) => {
                 username: existingUser.username,
                 userRole: existingUser.role,
             },
-            'supersecret_dont_share',
+            process.env.JWT_SECRET,
             { expiresIn: '1h' }
         )
     } catch (err) {
