@@ -1,8 +1,0 @@
-{
-    "env": {
-        "DB_USER": "krome",
-        "DB_PASSWORD": "Thirty30",
-        "DB_NAME": "cars_rental",
-        "JWT_KEY": "supersecret_dont_share"
-    }
-}
