@@ -11,7 +11,7 @@ module.exports = (req, res, next) => {
         if (!token) {
             throw new Error('Request denied!')
         }
-        const decodeToken = jwt.verify(token, 'supersecret_dont_share')
+        const decodeToken = jwt.verify(token, process.env.JWT_KEY)
 
         if (decodeToken.userRole === 'admin') {
             req.userData = {
